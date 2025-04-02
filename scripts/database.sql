@@ -16,7 +16,11 @@ CREATE DATABASE DataWarehouse;
 
 USE DataWarehouse;
 
---Create schemas
+--Create Bronze schema
 CREATE SCHEMA Bronze;
+
+--Create Silver schema
 CREATE SCHEMA Silver;
+
+--Create Gold schema
 CREATE SCHEMA Gold;
