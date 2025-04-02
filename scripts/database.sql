@@ -1,26 +1,27 @@
 /*
 =========================================
-Topic: SQL Data Warehouse Setup Script (Create database and schemas) 
+Topic: SQL Data Warehouse Setup Script (Create databases and schema) 
 =========================================
-Purpose: This script creates a structured data warehouse with Bronze, Silver, and Gold schemas.  
-Warning: Running this script will permanently delete the 'DataWarehouse' database if it exists, resulting in data loss. Proceed with caution.
+Purpose: This script creates a structured data warehouse with Bronze, Silver, and Gold databases.  
+Warning: Running this script will permanently delete existing databases, resulting in data loss. Proceed with caution.
 */
 
 
 
---Drop if exists 'DataWarehouse' database
-DROP DATABASE IF EXISTS DataWarehouse;
+--Delete if database already exists
+DROP DATABASE IF EXISTS Bronze
 
---Create new database
-CREATE DATABASE DataWarehouse;
+--Create Bronze database
+CREATE DATABASE Bronze;
 
-USE DataWarehouse;
+--Delete if database already exists
+DROP DATABASE IF EXISTS Silver
 
---Create Bronze schema
-CREATE SCHEMA Bronze;
+--Create Silver database
+CREATE DATABASE Silver;
 
---Create Silver schema
-CREATE SCHEMA Silver;
+--Delete if database already exists
+DROP DATABASE IF EXISTS Gold
 
---Create Gold schema
-CREATE SCHEMA Gold;
+--Create Gold database
+CREATE DATABASE Gold;
