@@ -9,14 +9,14 @@ This repository is dedicated to building a Data Warehouse using SQL, covering ke
 ### Building the Data Warehouse (Data Engineering)
 
 ### Objective
-Develop modern data warehouse using sql server to consolidate sales data, enabling analytical reporting and informed decision-making.
+Develop a modern data warehouse using MySQL to consolidate sales data, enabling analytical reporting and informed decision-making.
 
 ### Specifications
 - **Data Sources** : Import data from two source systems(ERP and CRM) provided as CSV files.
-- **Data Quality** : Cleanse and resolve data quality issues prior to analysis.
-- **Integration**  : Combine both sources into a single, user-friendly data model designed for analytical queries.
-- **Scope**        : Focus on latest data only, historization of data is not required.
-- **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics team.
+- **Data Quality** : Clean and resolve data quality issues before analysis.
+- **Integration**  : Combine both sources into a user-friendly data model for analytical queries.
+- **Scope**        : Focus on the latest data only; historization of data is not required.
+- **Documentation**: Provide clear data model documentation to support both business stakeholders and the analytics team.
 
 
 ---
@@ -24,7 +24,7 @@ Develop modern data warehouse using sql server to consolidate sales data, enabli
 ### BI: Analytics and Reporting (Data Analytics)
 
 ### Objective
-Develops SQL based analytics to deliver detailed insights into:
+Develops SQL-based analytics to deliver detailed insights into:
 - **Customer behaviour**
 - **Product performance**
 - **Sales trends**
