@@ -9,19 +9,19 @@ Warning: Running this script will permanently delete existing databases, resulti
 
 
 --Delete if database already exists
-DROP DATABASE IF EXISTS Bronze
+DROP DATABASE IF EXISTS Bronze;
 
 --Create Bronze database
 CREATE DATABASE Bronze;
 
 --Delete if database already exists
-DROP DATABASE IF EXISTS Silver
+DROP DATABASE IF EXISTS Silver;
 
 --Create Silver database
 CREATE DATABASE Silver;
 
 --Delete if database already exists
-DROP DATABASE IF EXISTS Gold
+DROP DATABASE IF EXISTS Gold;
 
 --Create Gold database
 CREATE DATABASE Gold;
