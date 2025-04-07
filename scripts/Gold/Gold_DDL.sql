@@ -1,5 +1,22 @@
+/*
+===============================================================
+Script Name  : Gold_DDL.sql
+
+Description  : This script defines the schema and table structure  
+               for the Gold layer of the Data Warehouse.  
+               It represents the finala dimension and fact tables(Star Schema)
+
+               Each view performs transformations and combines data from the Silver layer
+	       to produce a clean, enriched, and business reday dataset.
+
+Usage        : These views can be quaried directly for analytics and reporting. 
+===============================================================
+*/
 
 
+--===============================================================
+--Create Dimensions : Gold.dim_customers
+--===============================================================
 CREATE VIEW Gold.dim_customers AS
 SELECT
 	ROW_NUMBER() OVER (ORDER BY cst_id) as customer_key,
@@ -21,7 +38,9 @@ LEFT JOIN Silver.erp_loc_a101 AS la
 ON ci.cst_key = la.cid;
 
 
-
+--===============================================================
+--Create Dimensions : Gold.dim_products
+--===============================================================
 CREATE VIEW Gold.dim_products AS
 SELECT
 	ROW_NUMBER() OVER (ORDER BY pn.prd_start_dt,pn.prd_key) as product_key,
@@ -41,7 +60,9 @@ ON pn.cat_id = pc.id
 WHERE prd_end_dt IS NULL;
 
 
-
+--===============================================================
+--Create Dimensions : Gold.fact_sales
+--===============================================================
 CREATE VIEW Gold.fact_sales AS
 SELECT 
 sd.sls_ord_num as order_number,
